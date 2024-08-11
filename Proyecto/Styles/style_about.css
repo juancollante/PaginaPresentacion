@@ -1,0 +1,138 @@
+:root {
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #22d4fd;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fuente-montserrat);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    flex-shrink: 0;
+    padding: 20px;
+}
+
+.header {
+    padding: 2% 0% 0% 15%;
+    background-color: transparent;
+}
+
+.header_menu {
+    display: flex;
+    gap: 80px;
+}
+
+.header_menu_link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 20px;
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.presentacion_contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.presentacion_contenido_titulo {
+    font-size: 2rem;
+    font-family: var(--fuente-krona);
+}
+
+.presentacion_contenido_texto {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+footer {
+    background-color: var(--color-terciario);
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0;
+    width: 100%;
+    color: var(--color-primario);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.presentacion_imagen {
+    width: 70%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        padding: 2% 0% 0% 5%;
+    }
+
+    .header_menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .presentacion_contenido {
+        align-items: center;
+        text-align: center;
+    }
+
+    .presentacion_imagen {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+}
